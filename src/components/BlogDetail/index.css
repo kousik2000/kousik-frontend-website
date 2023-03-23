@@ -38,6 +38,9 @@
   justify-content: center;
   align-items: center;
 }
+.url-image {
+  font-style: none;
+}
 @media (max-width: 952px) {
   .blog-heading {
     font-size: 16px;
@@ -58,11 +61,12 @@
     padding: 30px;
   }
   .blogImage {
+    width: 100%;
     margin-right: 0px;
     margin-bottom: 10px;
   }
   .blog-heading {
-    margin-top: -5px;
+    margin-top: 5px;
   }
   .blog-description {
     display: none;

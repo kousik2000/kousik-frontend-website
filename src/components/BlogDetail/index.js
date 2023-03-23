@@ -6,7 +6,9 @@ const BlogDetail = (props) => {
 
   return (
     <div class="blogListDetail-container">
-      <img src={imageUrl} className="blogImage" alt="blog" />
+      <a href={url} target="_blank" rel="noreferrer" className="url-image">
+        <img src={imageUrl} className="blogImage" alt="blog" />
+      </a>
       <div className="blog-description-container">
         <h1 className="blog-heading">{title}</h1>
         <p className="blog-description">{description}</p>
