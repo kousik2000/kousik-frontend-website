@@ -1,0 +1,66 @@
+.portfolio-Detail-container {
+  width: 300px;
+  height: 250px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  text-decoration: none;
+}
+.PortfolioImage {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  margin: 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+.PortfolioImage:hover {
+  scale: 0.9;
+}
+.title-git-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.git-link {
+  background-color: #002b4a;
+  padding: 3px;
+  float: right;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+.git-link:hover {
+  scale: 1.1;
+}
+@media (max-width: 952px) {
+  .portfolio-Detail-container {
+    width: 100%;
+    height: 230px;
+  }
+  .PortfolioImage {
+    width: 95%;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 720px) {
+  .portfolio-Detail-container {
+    width: 100%;
+    height: 230px;
+  }
+  .PortfolioImage {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+  }
+}

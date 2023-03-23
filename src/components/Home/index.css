@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("https://i.ibb.co/gwnFf0D/85343.png");
+  background-size: cover;
+}
+.main-head {
+  font-size: 70px;
+  color: white;
+  font-weight: bolder;
+  margin: 0px;
+}
+.section-1 {
+  margin: 70px 150px 0px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  animation: section-1-text-load 1s ease-in-out;
+}
+.button {
+  width: 300px;
+  height: 70px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #907eff;
+  font-size: 24px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+}
+.button:hover {
+  box-shadow: #907eff;
+  box-shadow: 0 0 10px 5px #907eff;
+  transform: scale(1.1);
+}
+.main-description {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 30px;
+}
+.section-2 {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: auto;
+}
+.sub-head {
+  font-size: 50px;
+  font-family: Roboto;
+  margin-bottom: 20px;
+  color: white;
+}
+.description {
+  font-size: 24px;
+  font-family: Roboto;
+  font-weight: lighter;
+  margin-right: 150px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.about-container {
+  padding: 30px 150px 50px 150px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.my-skill-container {
+  width: 100%;
+  height: 500px;
+  background-color: #002b4a;
+  padding: 30px 150px 30px 150px;
+  display: flex;
+  align-items: center;
+}
+.skill-text {
+  width: 70%;
+}
+.home-blog-container {
+  width: 100%;
+  padding: 30px 150px 30px 150px;
+}
+.codeButton {
+  margin-top: 20px;
+}
+.code-snippets {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.contact-container {
+  width: 100%;
+  height: 800px;
+  background-color: #002b4a;
+  padding: 40px 150px 30px 150px;
+}
+.follow-me-section {
+  padding: 40px 150px 30px 150px;
+}
+@keyframes section-1-text-load {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 952px) {
+  .description {
+    font-size: 16px;
+    margin-right: 0px;
+  }
+  .sub-head {
+    font-size: 30px;
+    color: white;
+  }
+  .section-1 {
+    margin: 70px 50px 0px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .main-head {
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .main-description {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .my-skill-container {
+    width: 100%;
+    height: auto;
+    background-color: #002b4a;
+    padding: 30px 50px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill-text {
+    width: 100%;
+  }
+  .about-container {
+    padding: 30px 50px 50px 50px;
+    height: auto;
+  }
+  .home-blog-container {
+    width: 100%;
+    padding: 30px 50px 30px 50px;
+  }
+  .contact-container {
+    padding: 40px 50px 30px 50px;
+  }
+  .follow-me-section {
+    padding: 40px 50px 30px 50px;
+  }
+}
+@media (max-width: 720px) {
+  .contact-container {
+    height: auto;
+  }
+}

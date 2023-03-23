@@ -1,0 +1,155 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  animation: nav-load 500ms ease-in-out;
+  border-color: #002b4a;
+  border-style: solid;
+  border-width: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.nav-link {
+  list-style: none;
+  text-decoration: none;
+}
+.logo {
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+  margin-left: 150px;
+  animation-name: nav-link-load;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+  transform: scale(0);
+}
+.logo span {
+  color: #907eff;
+}
+.navbar ul {
+  margin-right: 150px;
+}
+.navbar ul li {
+  display: inline-block;
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  padding: 23px;
+  animation-name: nav-link-load;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+  transform: scale(0);
+  cursor: pointer;
+}
+.navbar ul li:hover {
+  background-color: #ffffff44;
+  scale: 1.1;
+}
+.nav-link .logo:hover {
+  scale: 1.2;
+}
+.checkbtn {
+  font-size: 40px;
+  color: white;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes nav-link-load {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 952px) {
+  .logo {
+    font-size: 40px;
+    margin-left: 50px;
+  }
+  .navbar {
+    height: 100px;
+  }
+  .navbar ul {
+    margin-right: 50px;
+  }
+  .navbar ul li {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .logo {
+    font-size: 40px;
+    margin-left: 20px;
+  }
+  .navbar {
+    height: 80px;
+  }
+  .navbar ul {
+    margin-right: 20px;
+  }
+  .navbar ul li {
+    font-size: 16px;
+  }
+  .checkbtn {
+    display: block;
+  }
+  .navbar ul {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #2c3e50;
+    top: 60px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: all 0.5s;
+    display: none;
+  }
+  .navbar ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    font-size: 24px;
+  }
+  /* Show the list when the #check checkbox is checked */
+  #check:checked ~ ul {
+    display: block;
+  }
+  /* Add the .checked class to the list when it's visible */
+  .navbar ul.checked {
+    display: block;
+  }
+}
