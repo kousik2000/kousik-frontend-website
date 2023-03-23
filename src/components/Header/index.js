@@ -36,7 +36,7 @@ const Header = (props) => {
         </h1>
       </Link>
       <ul className="navbar-list">
-        <Link to="/">
+        <Link to="/" className="nav-link">
           <li onClick={hideNavbarList}>Home</li>
         </Link>
         <li
@@ -55,7 +55,7 @@ const Header = (props) => {
         >
           Contact
         </li>
-        <Link to="/account">
+        <Link to="/account" className="nav-link">
           <li onClick={hideNavbarList}>Account</li>
         </Link>
       </ul>
