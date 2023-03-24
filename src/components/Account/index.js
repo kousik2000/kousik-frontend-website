@@ -5,6 +5,7 @@ import "./index.css";
 import Header from "../Header";
 import Contact from "../Contact";
 import Login from "../Login";
+import ApiContainer from "../ApiContainer";
 
 class Account extends Component {
   state = { isLoggedIn: "", isButtonClicked: false };
@@ -30,6 +31,9 @@ class Account extends Component {
         />
         <div className="login-container">
           <Login />
+        </div>
+        <div className="login-container">
+          <ApiContainer />
         </div>
         <div className="contact-container" id="contact">
           <div>
