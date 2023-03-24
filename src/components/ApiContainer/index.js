@@ -17,7 +17,7 @@ class ApiContainer extends Component {
     this.setState({ formData: event.target.value });
   };
 
-  handleFormSubmit = (event) => {
+  handleFormSubmit = async (event) => {
     event.preventDefault();
     const { selectedType, selectedMethod, formData } = this.state;
     let url;
@@ -35,7 +35,7 @@ class ApiContainer extends Component {
       },
     };
 
-    const response = fetch(url, options);
+    const response = await fetch(url, options);
 
     if (response.ok === true) {
       alert("successful");
