@@ -78,4 +78,8 @@ input {
   .text-area {
     margin-top: 20px;
   }
+  .icon:hover {
+    box-shadow: 0 0 3px 1px #907eff;
+    scale: 1.51;
+  }
 }
