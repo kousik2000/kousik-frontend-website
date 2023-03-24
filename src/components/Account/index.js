@@ -8,7 +8,7 @@ import Login from "../Login";
 import ApiContainer from "../ApiContainer";
 
 class Account extends Component {
-  state = { isLoggedIn: "", isButtonClicked: false };
+  state = { isLoggedIn: false, isButtonClicked: false };
 
   isPortfolioClicked = () => {
     this.setState({ isButtonClicked: true });
@@ -18,7 +18,7 @@ class Account extends Component {
   };
 
   render() {
-    const { isButtonClicked } = this.state;
+    const { isButtonClicked, isLoggedIn } = this.state;
 
     if (isButtonClicked) {
       return <Navigate to="/#portfolio" />;
@@ -29,11 +29,14 @@ class Account extends Component {
           isPortfolioClicked={this.isPortfolioClicked}
           isContactClicked={this.isContactClicked}
         />
-        <div className="login-container">
+        {/* <div className="login-container">
           <Login />
         </div>
         <div className="login-container">
           <ApiContainer />
+        </div> */}
+        <div className="login-container">
+          {isLoggedIn ? <ApiContainer /> : <Login />}
         </div>
         <div className="contact-container" id="contact">
           <div>

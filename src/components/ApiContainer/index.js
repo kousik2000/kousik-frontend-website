@@ -22,14 +22,14 @@ class ApiContainer extends Component {
     const { selectedType, selectedMethod, formData } = this.state;
     let url;
     if (selectedType === "Portfolio") {
-      url = "https://portfolio-backend-rho.vercel.app/updateportfolio";
+      url = "https://portfolio-backend-rho.vercel.app/portfolio";
     } else {
       url = "https://portfolio-backend-rho.vercel.app/updateblog";
     }
 
     const options = {
       method: { selectedMethod },
-      body: JSON.stringify({ data: formData }),
+      body: { formData },
       headers: {
         "Content-Type": "application/json",
       },
