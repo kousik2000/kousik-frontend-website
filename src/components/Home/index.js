@@ -51,7 +51,7 @@ class Home extends Component {
               Innovation
             </p>
             <a
-              href="https://drive.google.com/file/d/17iaX2-E3E_sMYG3VnQptvcn8gPcnx6Rq/view?usp=sharing"
+              href="https://drive.google.com/file/d/1JMVihKI6ez454IqChG-j2sycHTDbzbiI/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
