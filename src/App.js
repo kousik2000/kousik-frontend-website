@@ -6,15 +6,20 @@ import Home from "./components/Home";
 import Account from "./components/Account";
 import NotFound from "./components/NotFound";
 
+import { Analytics } from "@vercel/analytics/react";
+
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/account" element={<Account />} />
-        <Route path="/not-found" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/account" element={<Account />} />
+          <Route path="/not-found" element={<NotFound />} />
+        </Routes>
+      </Router>
+      <Analytics />
+    </>
   );
 };
 
