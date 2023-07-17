@@ -62,7 +62,7 @@ class MyBlog extends Component {
   }
 
   getBlogData = async () => {
-    const url = "https://portfolio-backend-rho.vercel.app/blog";
+    const url = "https://backend-mongo.onrender.com/getblogdata";
     const options = {
       method: "GET",
     };
