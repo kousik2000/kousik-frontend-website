@@ -72,7 +72,7 @@ class Portfolio extends Component {
   }
 
   getPortfolioData = async () => {
-    const url = "https://backend-mongo.onrender.com/getportfoliodata";
+    const url = "https://portfolio-backend-rho.vercel.app/portfolio";
     const options = {
       method: "GET",
     };
