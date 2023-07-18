@@ -1,6 +1,6 @@
 .portfolio-Detail-container {
-  width: 300px;
-  height: 250px;
+  max-width: 300px;
+  max-height: 250px;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,7 @@
   justify-content: flex-start;
   color: white;
   text-decoration: none;
+  margin-right: 15px;
 }
 .PortfolioImage {
   width: 100%;

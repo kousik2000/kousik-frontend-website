@@ -62,7 +62,7 @@ class MyBlog extends Component {
   }
 
   getBlogData = async () => {
-    const url = "https://portfolio-backend-rho.vercel.app/blog";
+    const url = "https://backend-mongo-rho.vercel.app/getblogdata";
     const options = {
       method: "GET",
     };
@@ -79,7 +79,7 @@ class MyBlog extends Component {
         <div className="slider-container">
           <Slider {...settings}>
             {initialBlogList.map((eachBlog) => (
-              <BlogDetail eachBlog={eachBlog} key={eachBlog.id} />
+              <BlogDetail eachBlog={eachBlog} key={eachBlog._id} />
             ))}
           </Slider>
         </div>

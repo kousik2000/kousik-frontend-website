@@ -72,13 +72,35 @@ class Portfolio extends Component {
   }
 
   getPortfolioData = async () => {
-    const url = "https://portfolio-backend-rho.vercel.app/portfolio";
+    const url = "https://backend-mongo-rho.vercel.app/getportfoliodata";
     const options = {
       method: "GET",
     };
     const response = await fetch(url, options);
     const fetchedData = await response.json();
+    console.log(fetchedData);
     this.setState({ initialPortfolioList: fetchedData });
+
+    // try {
+    //   const response = await axios.get(
+    //     "https://backend-mongo.onrender.com/getportfoliodata"
+    //   );
+    //   const fetchedData = await response.json();
+    //   this.setState({ initialPortfolioList: fetchedData });
+    // } catch (error) {
+    //   console.error(error);
+    // }
+
+    //     fetch('https://backend-mongo.onrender.com/getportfoliodata')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     // Handle the response data
+    //     console.log(data);
+    //   })
+    //   .catch(error => {
+    //     // Handle any errors
+    //     console.error(error);
+    //   });
   };
 
   render() {
@@ -91,7 +113,7 @@ class Portfolio extends Component {
             {initialPortfolioList.map((eachPortfolio) => (
               <PortfolioDetail
                 eachPortfolio={eachPortfolio}
-                key={eachPortfolio.id}
+                key={eachPortfolio._id}
               />
             ))}
           </Slider>
